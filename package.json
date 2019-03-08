@@ -1,0 +1,38 @@
+{
+  "name": "gigs-finder",
+  "version": "1.0.0",
+  "description": "Key finding Developer job application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./build/server/app.js",
+    "prestart": "npm run build",
+    "prebuild": "rm -rf ./build",
+    "build": "babel ./ -d build --ignore node_modules/ --presets=env --source-maps inline --copy-files",
+    "dev-start": "babel-watch ./Server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnayoOleru/Gigs-Finder.git"
+  },
+  "author": "Anayo Oleru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnayoOleru/Gigs-Finder/issues"
+  },
+  "homepage": "https://github.com/AnayoOleru/Gigs-Finder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.8.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.43.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^7.0.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
